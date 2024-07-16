@@ -13,6 +13,8 @@ class Usuario(AbstractUser):
     data_nascimento = models.DateField(
         _("Birth Date"), auto_now=False, auto_now_add=False, blank=True, null=True
     )
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=True)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
