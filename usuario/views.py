@@ -13,21 +13,21 @@ class UsuarioViewSet(ModelViewSet):
     queryset = User.objects.all().order_by("id")
     serializer_class = UsuarioSerializer
 
-    @action(detail=False, methods=["get"], permission_classes=[IsAuthenticated])
-    def me(self, request):
-        user = request.user
-        serializer = UsuarioSerializer(user)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+ ##   @action(detail=False, methods=["get"], permission_classes=[IsAuthenticated])
+ ##   def me(self, request):
+  ##      user = request.user
+ ##       serializer = UsuarioSerializer(user)
+ ##       return Response(serializer.data, status=status.HTTP_200_OK)
 
-@api_view(['GET'])
-def verify_user(request, verification_token):
-    try:
-        user = User.objects.get(verification_token=verification_token)
-    except User.DoesNotExist:
-        return Response({'error': 'Invalid Verification Token'}, status=status.HTTP_404_NOT_FOUND)
+##@api_view(['GET'])
+##def verify_user(request, verification_token):
+  ##  try:
+   ##     user = User.objects.get(verification_token=verification_token)
+  ##  except User.DoesNotExist:
+  ##      return Response({'error': 'Invalid Verification Token'}, status=status.HTTP_404_NOT_FOUND)
+##
+  ##  user.is_verified = True
+  ##  user.verification_token = None
+  ##  user.save()
 
-    user.is_verified = True
-    user.verification_token = None
-    user.save()
-
-    return Response({'message': 'User verified with succes'}, status=status.HTTP_200_OK)
+  ##  return Response({'message': 'User verified with succes'}, status=status.HTTP_200_OK)

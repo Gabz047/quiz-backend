@@ -6,7 +6,7 @@ from .managers import CustomUserManager
 
 
 class Usuario(AbstractUser):
-    username = None
+    username = models.CharField(max_length=50, null=True)
     email = models.EmailField(_("e-mail address"), unique=True)
     cpf = models.CharField(_("CPF"), max_length=11, blank=True, null=True)
     telefone = models.CharField(_("Phone"), max_length=11, blank=True, null=True)
