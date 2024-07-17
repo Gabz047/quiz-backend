@@ -12,7 +12,7 @@ dependencies = [
     "django-cors-headers>=4.4.0",
     "djangorestframework-simplejwt>=5.3.1",
 ]
-requires-python = "==3.12.*"
+requires-python = "==3.10.*"
 readme = "README.md"
 license = {text = "MIT"}
 
@@ -26,3 +26,13 @@ runserver = "python manage.py runserver"
 createsuperuser = "python manage.py createsuperuser"
 migrate = "python manage.py migrate"
 makemigrations = "python manage.py makemigrations"
+
+[[tool.pdm.autoexport]]
+filename = "requirements.txt"
+without-hashes = "true"
+
+
+[[tool.pdm.autoexport]]
+filename = "requirements.txt"
+without-hashes = "true"
+
