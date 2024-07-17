@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["cross_platform", "inherit_metadata"]
 lock_version = "4.4.2"
-content_hash = "sha256:ccb52c2529f7029db2f16ae5fd585df0b516b2eee7cf58b02fd12afde326bf53"
+content_hash = "sha256:64664ae4be78178a87fafe264f845abac1e5ae7c6788e3566652a901329fed09"
 
 [[package]]
 name = "asgiref"
