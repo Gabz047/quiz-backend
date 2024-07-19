@@ -19,7 +19,7 @@ from django.urls import include, path
 from django.conf import settings
 
 from quiz.views import AnswerViewSet, QuizViewSet
-from usuario.views import verify_user
+# from usuario.views import verify_user
 
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -40,8 +40,6 @@ router = DefaultRouter()
 router.register(r"quiz", QuizViewSet )
 router.register(r"quiz", AnswerViewSet )
 
-# from usuario.views import verify_user
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
@@ -59,5 +57,5 @@ urlpatterns = [
         SpectacularRedocView.as_view(url_name="schema"),
         name="redoc",
     ),
-   path("api/verify-user/<str:verification_token>/", verify_user, name="verify-user"),
+   # path("api/verify-user/<str:verification_token>/", verify_user, name="verify-user"),
 ]
