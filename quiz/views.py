@@ -14,6 +14,7 @@ class QuizViewSet(ModelViewSet):
         elif self.action in ["retrieve"]:
             return QuizDetailSerializer
         return QuizWriteSerializer
+    http_method_names=["get", "put", "delete", "post"]
     
 class AnswerViewSet(ModelViewSet):
     queryset = Answer.objects.all()
@@ -24,3 +25,4 @@ class AnswerViewSet(ModelViewSet):
         elif self.action in ["retrieve"]:
             return AnswerDetailSerializer
         return AnswerWriteSerializer
+    

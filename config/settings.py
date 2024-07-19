@@ -37,10 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'drf_spectacular',
     'corsheaders',
     'rest_framework',
     'rest_framework_simplejwt',
+    'passage_auth'
     'quiz',
     'usuario',
 ]
@@ -142,3 +144,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOW_ALL_ORIGINS = True
 
 AUTH_USER_MODEL = "usuario.Usuario"
+
+PASSAGE_APP_ID = 'U4AeJFba6uqOaCeuhhmksac8'
+PASSAGE_API_KEY = 'ga86U3GcBc.KNxtMP6beb1rgNFyjO4AReelKsgdkYuYJ4W7rWDpEDBm4dyvKoiurxUHTVuLmKWr'
+PASSAGE_AUTH_STRATEGY = 2
+
