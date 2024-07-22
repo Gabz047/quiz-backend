@@ -26,9 +26,7 @@ class AnswerDetailSerializer(ModelSerializer):
         fields: list[str] = [
             "id",
             "question",
-            "option",
-            "correct",
-            "comment_answer"
+            "option"
         ]
     
 class AnswerWriteSerializer(ModelSerializer):
@@ -36,7 +34,5 @@ class AnswerWriteSerializer(ModelSerializer):
         model = Answer
         fields: list[str] = [
             "question",
-            "option",
-            "correct",
-            "comment_answer"
+            "option"
         ]

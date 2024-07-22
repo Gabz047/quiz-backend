@@ -36,6 +36,8 @@ class TokenAuthentication(authentication.BaseAuthentication):
         psg_user_id: str = self._get_user_id(request)
         user: User = self._get_or_create_user(psg_user_id)
 
+        return (user, None)
+
     def _get_or_create_user(self, psg_user_id) -> User:
         try:
             user: User = User.objects.get(passage_id=psg_user_id)
@@ -45,6 +47,7 @@ class TokenAuthentication(authentication.BaseAuthentication):
                 passage_id=psg_user.id,
                 email=psg_user.email,
             )
+        return user
 
     def _get_user_id(self, request) -> str:
         try:

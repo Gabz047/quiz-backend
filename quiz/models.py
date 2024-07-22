@@ -9,7 +9,5 @@ class Quiz(models.Model):
 class Answer(models.Model):
     question = models.ForeignKey(Quiz, on_delete=models.CASCADE)
     option = models.TextField(default=[])
-    correct = models.BooleanField()
-    comment_answer = models.TextField(default="")
 
     

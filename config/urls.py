@@ -38,7 +38,7 @@ from usuario.router import router as usuario_router
 
 router = DefaultRouter()
 router.register(r"quiz", QuizViewSet )
-router.register(r"quiz", AnswerViewSet )
+router.register(r"answer", AnswerViewSet )
 
 urlpatterns = [
     path('admin/', admin.site.urls),
