@@ -15,6 +15,9 @@ class Usuario(AbstractUser):
     )
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=True)
+    passage_id = models.CharField(max_length=255, unique=True, null=True)
+    is_verified = models.BooleanField(default=False)
+    verification_token = models.CharField(max_length=100, blank=True, null=True)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
